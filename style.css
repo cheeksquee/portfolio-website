@@ -9,6 +9,12 @@ body {
     background-color: rgb(252, 246, 243);
 }
 
+/* Animations */
+@keyframes wobble {
+    33% {transform: rotate(5deg)}
+    66% {transform: rotate(-5deg)}
+}
+
 /* Classes and ID's */
 
 /* Logo Box */
@@ -64,6 +70,7 @@ body {
     color: black;
     font-size: 20px;
     position: absolute;
+    padding-right: 5px;
     top: 50px;
     left: 20px;
 }
@@ -78,6 +85,7 @@ body {
 
 /* Navigation */
 #home {
+    z-index: 2;
     background-color: rgb(177, 86, 94);
     box-shadow: 5px 5px rgb(79, 27, 3);
     width: 50px;
@@ -90,7 +98,14 @@ body {
     align-items: center;
 }
 
+#home:hover{
+    animation: wobble 5s ease infinite;
+    scale: 1.1;
+    transition: 150ms ease;
+}
+
 #projects {
+    z-index: 2;
     background-color: rgb(177, 86, 94);
     color: white;
     font-size: 20px;
@@ -106,7 +121,14 @@ body {
     align-items: center;
 }
 
+#projects:hover{
+    animation: wobble 5s ease infinite;
+    scale: 1.1;
+    transition: 150ms ease;
+}
+
 #experiences {
+    z-index: 2;
     background-color: rgb(177, 86, 94);
     color: white;
     font-size: 20px;
@@ -122,13 +144,21 @@ body {
     align-items: center;
 }
 
+#experiences:hover{
+    animation: wobble 5s ease infinite;
+    scale: 1.1;
+    transition: 150ms ease;
+}
+
 #linkedin {
+    z-index: 2;
     position: fixed;
     top: 125px;
     right: 45px;
 }
 
 #github {
+    z-index: 2;
     position: fixed;
     top: 125px;
     right: 110px;
@@ -138,7 +168,7 @@ body {
 #label {
     position: fixed;
     background-color: rgb(252, 246, 243);
-    z-index: -1;
+    z-index: 1;
     width: 100%;
     height: 200px;
     display: flex;
@@ -149,4 +179,37 @@ body {
     padding-left: 50px;
     top: 0px;
     left: 0px;
+}
+
+/* Projects */
+.project {
+    display: flex;
+    flex-direction: column;
+    padding: 0px 25px 5px 25px;
+    margin: 0px 0px 25px 50px;
+    height: 600px;
+    width: 500px;
+    background-color: rgb(240, 220, 211);
+    box-shadow: 10px 10px rgb(189, 175, 168);
+    overflow-y: scroll;
+    scrollbar-width: none; 
+    -ms-overflow-style: none; 
+}
+
+.project::-webkit-scrollbar {
+    display: none;
+}
+
+.project:hover {
+    scale:1.05;
+    transition: 150ms ease;
+}
+
+.project_link {
+    margin-top: auto; 
+    margin-bottom: 15px; 
+    color: white; 
+    background-color: black;
+    padding: 5px 7px;
+    margin-right: auto;
 }
