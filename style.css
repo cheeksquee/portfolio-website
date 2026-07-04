@@ -7,6 +7,8 @@
 body {
     font-family: 'Horizon', sans-serif;
     background-color: rgb(252, 246, 243);
+    -webkit-user-select: none;
+    user-select: none;
 }
 
 /* Animations */
@@ -15,87 +17,52 @@ body {
     66% {transform: rotate(-5deg)}
 }
 
+@keyframes shaking {
+    33% {transform: translateX(3px)}
+    66% {transform: translateX(-3px)}
+    99% {transform: translateX(3px)}
+}
+
 /* Classes and ID's */
 
 /* Logo Box */
 .logo {
+    position: relative;
     background-color: rgb(26, 26, 26);
+    color: white;
     height: 450px;
     width: 450px;
     box-shadow: 10px 10px black;
-    position: relative;
-    top: 50px;
-    left: 50px;
-}
-
-#title1 {
-  color: white;
-  font-size: 30px;
-  position: absolute;
-  top: 90px;
-  left: 45px;
-}
-
-#title2 {
-    color: rgb(252, 246, 243);
-    font-size: 270px;
-    position: absolute;
-    top: -80px;
-    left: -75px;
+    margin: 50px 0px 0px 50px;
+    padding: 0px;
 }
 
 /* About Me Box */
 .about {
+    position: relative;
+    display: flex;
+    flex-direction: column;
     background-color: rgb(255, 231, 218);
     height: 300px;
     width: 700px;
     box-shadow: 10px 10px rgb(217, 188, 172);
-    position: relative;
-    top: 100px;
-    left: 50px;
-}
-
-#about_title {
-    color: white;
-    font-size: 25px;
-    background-color: black;
-    text-align: center;
-    position: absolute;
-    top: 0px;
-    left: 20px;
-    padding: 5px 10px;
-}
-
-#about_text {
-    color: black;
-    font-size: 20px;
-    position: absolute;
-    padding-right: 5px;
-    top: 50px;
-    left: 20px;
-}
-
-#resume_text {
-    color: black;
-    font-size: 20px;
-    position: absolute;
-    top: 225px;
-    left: 20px;
+    margin: 50px 0px 0px 50px;
+    padding: 0px 0px 0px 15px;
+    box-sizing: border-box;
 }
 
 /* Navigation */
 #home {
+    position: fixed;
     z-index: 2;
     background-color: rgb(177, 86, 94);
-    box-shadow: 5px 5px rgb(79, 27, 3);
     width: 50px;
     height: 50px;
-    position: fixed;
+    box-shadow: 5px 5px rgb(79, 27, 3);
     top: 50px;
     right: 50px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    padding: 5px;
+    box-sizing: border-box;
 }
 
 #home:hover{
@@ -105,18 +72,18 @@ body {
 }
 
 #projects {
+    position: fixed;
+    display: flex;
     z-index: 2;
     background-color: rgb(177, 86, 94);
     color: white;
     font-size: 20px;
     text-decoration: none;
-    box-shadow: 5px 5px rgb(79, 27, 3);
     width: 250px;
     height: 50px;
-    position: fixed;
+    box-shadow: 5px 5px rgb(79, 27, 3);
     top: 50px;
     right: 150px;
-    display: flex;
     justify-content: center;
     align-items: center;
 }
@@ -128,18 +95,18 @@ body {
 }
 
 #experiences {
+    position: fixed;
+    display: flex;
     z-index: 2;
     background-color: rgb(177, 86, 94);
     color: white;
     font-size: 20px;
     text-decoration: none;
-    box-shadow: 5px 5px rgb(79, 27, 3);
     width: 250px;
     height: 50px;
-    position: fixed;
+    box-shadow: 5px 5px rgb(79, 27, 3);
     top: 50px;
     right: 450px;
-    display: flex;
     justify-content: center;
     align-items: center;
 }
@@ -157,12 +124,21 @@ body {
     right: 45px;
 }
 
+#linkedin:hover{
+    animation: shaking 150ms ease-in-out infinite;
+}
+
 #github {
     z-index: 2;
     position: fixed;
     top: 125px;
     right: 110px;
 }
+
+#github:hover{
+    animation: shaking 150ms ease-in-out infinite;
+}
+
 
 /* Projects & Experiences Heading */
 #label {
