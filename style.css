@@ -18,174 +18,277 @@ body {
 }
 
 @keyframes shaking {
-    33% {transform: translateX(3px)}
-    66% {transform: translateX(-3px)}
-    99% {transform: translateX(3px)}
+    33% {transform: translateX(2%)}
+    66% {transform: translateX(-2%)}
+    99% {transform: translateX(2%)}
 }
 
-/* Classes and ID's */
-
-/* Logo Box */
-.logo {
+/* Logo */
+#logo {
     position: relative;
+
     background-color: rgb(26, 26, 26);
-    color: white;
-    height: 450px;
-    width: 450px;
-    box-shadow: 10px 10px black;
-    margin: 50px 0px 0px 50px;
-    padding: 0px;
+    color: rgb(252, 246, 243);
+    box-shadow: 0.532vw 0.532vw black;
+
+    width: 23.734%;
+    aspect-ratio: 1 / 1;
+
+    margin: 2.658% 0% 0% 2.658%;
 }
 
-/* About Me Box */
-.about {
+#logo_title1 {
+    position: absolute;
+
+    font-size: 1.595vw;
+
+    top: 20%;
+    left: 10%;
+}
+
+#logo_title2 {
+    position: absolute;
+
+    font-size: 14.354vw;
+
+    top: -17.778%;
+    left: -16.667%;
+}
+
+/* About Me */
+#about {
     position: relative;
     display: flex;
     flex-direction: column;
+
     background-color: rgb(255, 231, 218);
-    height: 300px;
-    width: 700px;
-    box-shadow: 10px 10px rgb(217, 188, 172);
-    margin: 50px 0px 0px 50px;
-    padding: 0px 0px 0px 15px;
+    color: black;
+    box-shadow: 0.532vw 0.532vw rgb(217, 188, 172);
+
+    width: 37.214%;
+    aspect-ratio: 2.3 / 1; 
+
+    margin: 2.658% 0% 0% 2.658%;
+    padding: 0% 0% 0% 0.797%;
     box-sizing: border-box;
+}
+
+#about_title {
+    background-color: black;
+    color: white;
+
+    font-size: 1.25vw;
+
+    margin-right: auto;
+    padding: 1%;
+}
+
+.about_desc {
+    font-size: 0.995vw;
+
+    margin: 0% 0% 2% 0%;
 }
 
 /* Navigation */
-#home {
-    position: fixed;
+.home {
     z-index: 2;
+    position: fixed;
+
     background-color: rgb(177, 86, 94);
-    width: 50px;
-    height: 50px;
-    box-shadow: 5px 5px rgb(79, 27, 3);
-    top: 50px;
-    right: 50px;
-    padding: 5px;
+    box-shadow: 0.266vw 0.266vw rgb(79, 27, 3);
+    
+    width: 2.658%;
+    aspect-ratio: 1 / 1;
+
+    top: 5.5%;
+    right: 3.05%;
+
+    padding: 0.266%;
     box-sizing: border-box;
 }
 
-#home:hover{
+.home:hover {
     animation: wobble 5s ease infinite;
     scale: 1.1;
     transition: 150ms ease;
 }
 
-#projects {
+.projects {
+    z-index: 2;
     position: fixed;
     display: flex;
-    z-index: 2;
+
     background-color: rgb(177, 86, 94);
     color: white;
-    font-size: 20px;
+    box-shadow: 0.266vw 0.266vw rgb(79, 27, 3);
+
+    font-size: 1.063vw;
     text-decoration: none;
-    width: 250px;
-    height: 50px;
-    box-shadow: 5px 5px rgb(79, 27, 3);
-    top: 50px;
-    right: 150px;
+
+    width: 13.291%;
+    aspect-ratio: 5 / 1;
+
+    top: 5.5%;
+    right: 8.366%;
+
     justify-content: center;
     align-items: center;
 }
 
-#projects:hover{
+.projects:hover {
     animation: wobble 5s ease infinite;
     scale: 1.1;
     transition: 150ms ease;
 }
 
-#experiences {
+.experiences {
+    z-index: 2;
     position: fixed;
     display: flex;
-    z-index: 2;
+
     background-color: rgb(177, 86, 94);
     color: white;
-    font-size: 20px;
+    box-shadow: 0.266vw 0.266vw rgb(79, 27, 3);
+
+    font-size: 1.063vw;
     text-decoration: none;
-    width: 250px;
-    height: 50px;
-    box-shadow: 5px 5px rgb(79, 27, 3);
-    top: 50px;
-    right: 450px;
+
+    width: 13.291%;
+    aspect-ratio: 5 / 1;
+
+    top: 5.5%;
+    right: 24.315%;
+
     justify-content: center;
     align-items: center;
 }
 
-#experiences:hover{
+.experiences:hover {
     animation: wobble 5s ease infinite;
     scale: 1.1;
     transition: 150ms ease;
 }
 
-#linkedin {
+.linkedin {
     z-index: 2;
     position: fixed;
-    top: 125px;
-    right: 45px;
+    
+    width: 2.924%;
+    aspect-ratio: 1 / 1;
+
+    top: 13.5%;
+    right: 2.658%;
 }
 
-#linkedin:hover{
+.linkedin:hover {
     animation: shaking 150ms ease-in-out infinite;
 }
 
-#github {
+.github {
     z-index: 2;
     position: fixed;
-    top: 125px;
-    right: 110px;
+    
+    width: 2.924%;
+    aspect-ratio: 1 / 1;
+
+    top: 13.5%;
+    right: 6.5%;
 }
 
-#github:hover{
+.github:hover {
     animation: shaking 150ms ease-in-out infinite;
 }
 
-
-/* Projects & Experiences Heading */
-#label {
-    position: fixed;
-    background-color: rgb(252, 246, 243);
+.header {
     z-index: 1;
-    width: 100%;
-    height: 200px;
+    position: fixed;
     display: flex;
+
+    background-color: rgb(252, 246, 243);
+
+    font-size: 2.658vw;
+    
+    width: 100%;
+    aspect-ratio: 9.405 / 1;
+
+    top: 0%;
+    left: 0%;
+
+    margin: 0%;
+    padding-left: 2.658%;
+
     justify-content: left;
     align-items: center;
-    font-size: 50px;
-    margin: 0px;
-    padding-left: 50px;
-    top: 0px;
-    left: 0px;
 }
 
-/* Projects */
+/* Project Gallery */
+#project_list {
+    position: relative;
+    display: grid;
+
+    grid-template-columns: repeat(3, 1fr);
+    gap: 0%;
+
+    top: 28%;
+}
+
 .project {
     display: flex;
     flex-direction: column;
-    padding: 0px 25px 5px 25px;
-    margin: 0px 0px 25px 50px;
-    height: 600px;
-    width: 500px;
+    
     background-color: rgb(240, 220, 211);
-    box-shadow: 10px 10px rgb(189, 175, 168);
+    box-shadow: 0.532vw 0.532vw rgb(189, 175, 168);
+
+    width: 80%;
+    aspect-ratio: 0.83 / 1;
+
+    margin: 0% 0% 15% 9%;
+    padding: 0% 3.19% 0.266% 2.658%;
+    box-sizing: border-box;
+
     overflow-y: scroll;
     scrollbar-width: none; 
     -ms-overflow-style: none; 
+}
+
+.project:hover {
+    scale: 1.05;
+    transition: 150ms ease;
 }
 
 .project::-webkit-scrollbar {
     display: none;
 }
 
-.project:hover {
-    scale:1.05;
-    transition: 150ms ease;
+.project_title {
+    background-color: black;
+    color: white;
+
+    font-size: 1.25vw;
+    
+    margin-right: auto;
+    padding: 2%;
+}
+
+.project_desc {
+    font-size: 0.7vw;
+
+    margin: 0% 2% 5% 0%;
+}
+
+.project_img {
+    width: 100%;
+    height: auto;
+
+    border: 0.3vw solid rgb(189, 175, 168);
 }
 
 .project_link {
-    margin-top: auto; 
-    margin-bottom: 15px; 
-    color: white; 
     background-color: black;
-    padding: 5px 7px;
-    margin-right: auto;
+    color: white;
+
+    font-size: 0.9vw;
+
+    margin: auto auto 4% 0%;
+    padding: 1.5%;
 }
