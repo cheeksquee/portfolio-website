@@ -1,2 +1,2 @@
 # portfolio-website
-My official website! Made using VSCode, HTML, and CSS (and JS soon!)
+My official website! Made using VSCode with the programming languages HTML and CSS!
