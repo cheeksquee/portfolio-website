@@ -23,6 +23,12 @@ body {
     99% {transform: translateX(2%)}
 }
 
+@keyframes hover {
+    0% {transform: translateY(1%)}
+    50% {transform: translateY(-2%)}
+    100% {transform: translateY(1%)}
+}
+
 /* Logo */
 #logo {
     position: relative;
@@ -261,6 +267,7 @@ body {
 }
 
 .project:hover {
+    animation: hover 5s ease-in-out infinite;
     scale: 1.05;
     transition: 150ms ease;
 }
