@@ -301,3 +301,15 @@ body {
     margin: auto auto 4% 0%;
     padding: 1.5%;
 }
+
+/* Experiences */
+#experiences_placeholder {
+    position: absolute;
+    background-color: black;
+    color: white;
+
+    font-size: 1.25vw;
+
+    margin: 13% auto 0% 2.658%;
+    padding: 1%;
+}
