@@ -100,9 +100,10 @@ body {
     width: 2.658%;
     aspect-ratio: 1 / 1;
 
-    top: 5.5%;
-    right: 3.05%;
+    top: 0%;
+    right: 0%;
 
+    margin: 2.658% 2.658% 0% 0%;
     padding: 0.266%;
     box-sizing: border-box;
 }
@@ -128,8 +129,10 @@ body {
     width: 13.291%;
     aspect-ratio: 5 / 1;
 
-    top: 5.5%;
-    right: 8.366%;
+    top: 0%;
+    right: 0%;
+
+    margin: 2.658% 8.366% 0% 0%;
 
     justify-content: center;
     align-items: center;
@@ -156,8 +159,10 @@ body {
     width: 13.291%;
     aspect-ratio: 5 / 1;
 
-    top: 5.5%;
-    right: 24.315%;
+    top: 0%;
+    right: 0%;
+
+    margin: 2.658% 24.315% 0% 0%;
 
     justify-content: center;
     align-items: center;
@@ -176,8 +181,10 @@ body {
     width: 2.924%;
     aspect-ratio: 1 / 1;
 
-    top: 13.5%;
-    right: 2.658%;
+    top: 0%;
+    right: 0%;
+
+    margin: 6.5% 2.392% 0% 0%;
 }
 
 .linkedin:hover {
@@ -191,8 +198,10 @@ body {
     width: 2.924%;
     aspect-ratio: 1 / 1;
 
-    top: 13.5%;
-    right: 6.5%;
+    top: 0%;
+    right: 0%;
+
+    margin: 6.5% 6.5% 0% 0%;
 }
 
 .github:hover {
