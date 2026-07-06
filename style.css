@@ -67,8 +67,7 @@ body {
 
     font-size: 1.595vw;
 
-    top: 20%;
-    left: 10%;
+    margin: 20% 0% 0% 9%;
 }
 
 #logo_title2 {
@@ -76,8 +75,7 @@ body {
 
     font-size: 14.354vw;
 
-    top: -17.778%;
-    left: -16.667%;
+    margin: 15% 0% 0% -17%;
 }
 
 /* About Me */
@@ -131,6 +129,8 @@ body {
     margin: 2.658% 2.658% 0% 0%;
     padding: 0.266%;
     box-sizing: border-box;
+
+    transition: 0.5s ease;
 }
 
 .home:hover {
@@ -161,6 +161,8 @@ body {
 
     justify-content: center;
     align-items: center;
+
+    transition: 0.5s ease;
 }
 
 .projects:hover {
@@ -191,6 +193,8 @@ body {
 
     justify-content: center;
     align-items: center;
+
+    transition: 0.5s ease;
 }
 
 .experiences:hover {
@@ -283,6 +287,8 @@ body {
     overflow-y: scroll;
     scrollbar-width: none; 
     -ms-overflow-style: none; 
+
+    transition: 0.5s ease;
 }
 
 .project:hover {
@@ -338,4 +344,146 @@ body {
 
     margin: 13% auto 0% 2.658%;
     padding: 1%;
+}
+
+/* Minigame - Title Screen */
+#minigame_background {
+    position: fixed;
+
+    background-image: url("forest.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    box-shadow: 0.532vw 0.532vw rgb(1, 15, 0);
+
+    width: 30%;
+    aspect-ratio: 1 / 1;
+    
+    top: 0%;
+    right: 0%;
+
+    margin: 12% 15% 10% 0%;
+}
+
+#ball_logo {
+    position: absolute;
+
+    width: 50%;
+    height: auto;
+
+    top: 35%;
+    left: 50%;
+
+    transform: translate(-50%, -50%)
+}
+
+#minigame_title {
+    position: absolute;
+
+    background-color: black;
+    color: white;
+
+    font-size: 1vw;
+
+    top: 35%;
+    left: 50%;
+
+    margin: 0%;
+    padding: 1% 1%;
+    transform: translate(-50%, -50%)
+}
+
+#minigame_button {
+    z-index: 100;
+    position: absolute;
+
+    background-color: black;
+    color: white;
+
+    font-size: 1.5vw;
+
+    top: 80%;
+    left: 50%;
+
+    padding: 1% 22.83%;
+    transform: translate(-50%, -50%);
+
+    transition: 0.5s ease;
+}
+
+#minigame_button:hover {
+    transform: translate(-50%, -50%) scale(1.1);
+    transition: 150ms ease;
+
+    cursor: pointer;
+}
+
+/* Minigame - Game */
+#minigame_timer {
+    position: absolute;
+
+    background-color: black;
+    color: white;
+
+    font-size: 1.5vw;
+
+    top: 4%;
+    left: 3.5%;
+
+    margin: 0%;
+    padding: 0% 1%;
+}
+
+#counter_logo {
+    position: absolute;
+
+    width: 10%;
+    height: auto;
+
+    top: 2%;
+    right: 3.5%;
+}
+
+#minigame_score {
+    position: absolute;
+
+    background-color: black;
+    color: white;
+
+    font-size: 1.5vw;
+
+    top: 4%;
+    right: 15%;
+
+    margin: 0%;
+    padding: 0% 1%;
+}
+
+#bush {
+    z-index: 10;
+    position: absolute;
+
+    width: 125%;
+    height: auto;
+    
+    bottom: 0%;
+    right: -15%;
+}
+
+#pokemon {
+    z-index: 5;
+    position: absolute;
+    
+    width: 15%;
+    height: auto;
+
+    bottom: 0%;
+    left: 5%;
+}
+
+#pokemon:hover {
+    scale: 1.1;
+    transition: 150ms ease;
+
+    cursor: pointer;
 }
