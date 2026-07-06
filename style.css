@@ -261,13 +261,13 @@ body {
 
 /* Project Gallery */
 #project_list {
-    position: relative;
+    position: fixed;
     display: grid;
 
     grid-template-columns: repeat(3, 1fr);
     gap: 0%;
 
-    top: 28%;
+    top: 30%;
 }
 
 .project {
