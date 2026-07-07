@@ -1,12 +1,16 @@
 /* Changing font for ALL my Text */
 @font-face {
     font-family: 'Horizon';
-    src: url('Horizon.woff2') format('woff2');
+    src: url('fonts/Horizon.woff2') format('woff2');
 }
 
 body {
     font-family: 'Horizon', sans-serif;
+
     background-color: rgb(252, 246, 243);
+
+    margin: 0;
+
     -webkit-user-select: none;
     user-select: none;
 }
@@ -18,174 +22,596 @@ body {
 }
 
 @keyframes shaking {
-    33% {transform: translateX(3px)}
-    66% {transform: translateX(-3px)}
-    99% {transform: translateX(3px)}
+    33% {transform: translateX(2%)}
+    66% {transform: translateX(-2%)}
+    99% {transform: translateX(2%)}
 }
 
-/* Classes and ID's */
+@keyframes hover {
+    0% {transform: translateY(1%)}
+    50% {transform: translateY(-2%)}
+    100% {transform: translateY(1%)}
+}
 
-/* Logo Box */
-.logo {
-    position: relative;
+@keyframes fade {
+    0% {transform: translateY(3%); opacity: 0.6}
+    100% {transform: translateY(0%); opacity: 1}
+}
+
+/* Click Animation */
+.click_box {
+    z-index: 100;
+    position: fixed;
+
+    background-color: transparent;
+    border: 0.1vw solid rgb(79, 27, 3);
+
+    width: 0.2%;
+    aspect-ratio: 1 / 1;
+
+    transform: translate(-50%, -50%);
+    animation: click 2s ease;
+}
+
+@keyframes click {
+    0% {transform: translate(-50%, -50%) scale(1); opacity: 1}
+    100% {transform: translate(-50%, -50%) scale(4); opacity: 0}
+}
+
+/* Logo */
+#logo {
+    position: fixed;
+
     background-color: rgb(26, 26, 26);
-    color: white;
-    height: 450px;
-    width: 450px;
-    box-shadow: 10px 10px black;
-    margin: 50px 0px 0px 50px;
-    padding: 0px;
+    color: rgb(252, 246, 243);
+    box-shadow: 0.532vw 0.532vw black;
+
+    width: 10%;
+    aspect-ratio: 1 / 1;
+
+    margin: 3% 0% 0% 3%;
+
+    animation: fade 1.5s ease-in-out;
 }
 
-/* About Me Box */
-.about {
-    position: relative;
+#logo_title1 {
+    position: absolute;
+
+    top: 22%;
+    left: 8%;
+
+    font-size: 0.7vw;
+
+    margin: 0%;
+}
+
+#logo_title2 {
+    position: absolute;
+
+    top: 20%;
+    left: -17%;
+
+    font-size: 6vw;
+
+    margin: 0%;
+}
+
+/* About Me */
+#about {
+    position: fixed;
     display: flex;
     flex-direction: column;
+
     background-color: rgb(255, 231, 218);
-    height: 300px;
-    width: 700px;
-    box-shadow: 10px 10px rgb(217, 188, 172);
-    margin: 50px 0px 0px 50px;
-    padding: 0px 0px 0px 15px;
+    color: black;
+    box-shadow: 0.532vw 0.532vw rgb(217, 188, 172);
+
+    width: 64%;
+    aspect-ratio: 4 / 1; 
+
+    left: 0%;
+
+    margin: 14.5% 0% 0% 33%;
+    padding: 0% 0% 0% 0.797%;
     box-sizing: border-box;
+
+    animation: fade 1.5s ease-in-out;
 }
 
-/* Navigation */
-#home {
-    position: fixed;
-    z-index: 2;
-    background-color: rgb(177, 86, 94);
-    width: 50px;
-    height: 50px;
-    box-shadow: 5px 5px rgb(79, 27, 3);
-    top: 50px;
-    right: 50px;
-    padding: 5px;
-    box-sizing: border-box;
-}
-
-#home:hover{
-    animation: wobble 5s ease infinite;
-    scale: 1.1;
-    transition: 150ms ease;
-}
-
-#projects {
-    position: fixed;
-    display: flex;
-    z-index: 2;
-    background-color: rgb(177, 86, 94);
+#about_title {
+    background-color: black;
     color: white;
-    font-size: 20px;
-    text-decoration: none;
-    width: 250px;
-    height: 50px;
-    box-shadow: 5px 5px rgb(79, 27, 3);
-    top: 50px;
-    right: 150px;
-    justify-content: center;
-    align-items: center;
+
+    font-size: 1.25vw;
+
+    margin-right: auto;
+    padding: 0.5% 1%;
 }
 
-#projects:hover{
-    animation: wobble 5s ease infinite;
-    scale: 1.1;
-    transition: 150ms ease;
+.about_desc {
+    font-size: 0.9vw;
+
+    width: 40%;
+    margin: 0% 0% 1% 0%;
 }
 
-#experiences {
+#about_img {
+    position: absolute;
+
+    background-image: url(assets/personalimg.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    width: 50%;
+    height: 81.5%;
+
+    top: 6.5%;
+    right: 4%;
+
+    border: 0.6vw solid rgb(217, 188, 172);
+}
+
+/* Tech Stack */
+#tech_stack {
     position: fixed;
-    display: flex;
-    z-index: 2;
-    background-color: rgb(177, 86, 94);
-    color: white;
-    font-size: 20px;
-    text-decoration: none;
-    width: 250px;
-    height: 50px;
-    box-shadow: 5px 5px rgb(79, 27, 3);
-    top: 50px;
-    right: 450px;
-    justify-content: center;
-    align-items: center;
-}
-
-#experiences:hover{
-    animation: wobble 5s ease infinite;
-    scale: 1.1;
-    transition: 150ms ease;
-}
-
-#linkedin {
-    z-index: 2;
-    position: fixed;
-    top: 125px;
-    right: 45px;
-}
-
-#linkedin:hover{
-    animation: shaking 150ms ease-in-out infinite;
-}
-
-#github {
-    z-index: 2;
-    position: fixed;
-    top: 125px;
-    right: 110px;
-}
-
-#github:hover{
-    animation: shaking 150ms ease-in-out infinite;
-}
-
-
-/* Projects & Experiences Heading */
-#label {
-    position: fixed;
-    background-color: rgb(252, 246, 243);
-    z-index: 1;
-    width: 100%;
-    height: 200px;
-    display: flex;
-    justify-content: left;
-    align-items: center;
-    font-size: 50px;
-    margin: 0px;
-    padding-left: 50px;
-    top: 0px;
-    left: 0px;
-}
-
-/* Projects */
-.project {
     display: flex;
     flex-direction: column;
-    padding: 0px 25px 5px 25px;
-    margin: 0px 0px 25px 50px;
-    height: 600px;
-    width: 500px;
-    background-color: rgb(240, 220, 211);
-    box-shadow: 10px 10px rgb(189, 175, 168);
+
+    background-color: rgb(177, 86, 94);
+    box-shadow: 0.532vw 0.532vw rgb(79, 27, 3);
+
+    width: 64%;
+    aspect-ratio: 5 / 1; 
+
+    margin: 32.2% 0% 0% 33%;
+    padding: 0% 0.797% 0% 0.797%;
+    box-sizing: border-box;
+
+    overflow-x: clip;
     overflow-y: scroll;
     scrollbar-width: none; 
     -ms-overflow-style: none; 
+
+    animation: fade 1.5s ease-in-out;
+}
+
+#tech_stack::-webkit-scrollbar {
+    display: none;
+}
+
+#stack_title {
+    background-color: black;
+    color: white;
+
+    font-size: 1.25vw;
+
+    margin-right: auto;
+    padding: 0.5% 1%;
+}
+
+.resource {
+    display: inline-block;
+
+    background-color: black;
+    color: rgb(177, 86, 94);
+
+    font-size: 1vw;
+
+    margin: 0% auto 1% 0%;
+    padding: 1% 5%;
+    justify-content: center;
+}
+
+.resource:hover {
+    transform: translateY(-10%);
+}
+
+/* Navigation */
+.home {
+    z-index: 2;
+    position: fixed;
+
+    background-color: rgb(177, 86, 94);
+    box-shadow: 0.266vw 0.266vw rgb(79, 27, 3);
+    
+    width: 2.658%;
+    aspect-ratio: 1 / 1;
+
+    top: 0%;
+    right: 0%;
+
+    margin: 2.658% 2.658% 0% 0%;
+    padding: 0.266%;
+    box-sizing: border-box;
+
+    transition: 0.5s ease;
+}
+
+.home:hover {
+    animation: wobble 5s ease infinite;
+    scale: 1.1;
+    transition: 150ms ease;
+}
+
+.projects {
+    z-index: 2;
+    position: fixed;
+    display: flex;
+
+    background-color: rgb(177, 86, 94);
+    color: white;
+    box-shadow: 0.266vw 0.266vw rgb(79, 27, 3);
+
+    font-size: 1.063vw;
+    text-decoration: none;
+
+    width: 13.291%;
+    aspect-ratio: 5 / 1;
+
+    top: 0%;
+    right: 0%;
+
+    margin: 2.658% 8.366% 0% 0%;
+
+    justify-content: center;
+    align-items: center;
+
+    transition: 0.5s ease;
+}
+
+.projects:hover {
+    animation: wobble 5s ease infinite;
+    scale: 1.1;
+    transition: 150ms ease;
+}
+
+.experiences {
+    z-index: 2;
+    position: fixed;
+    display: flex;
+
+    background-color: rgb(177, 86, 94);
+    color: white;
+    box-shadow: 0.266vw 0.266vw rgb(79, 27, 3);
+
+    font-size: 1.063vw;
+    text-decoration: none;
+
+    width: 13.291%;
+    aspect-ratio: 5 / 1;
+
+    top: 0%;
+    right: 0%;
+
+    margin: 2.658% 24.315% 0% 0%;
+
+    justify-content: center;
+    align-items: center;
+
+    transition: 0.5s ease;
+}
+
+.experiences:hover {
+    animation: wobble 5s ease infinite;
+    scale: 1.1;
+    transition: 150ms ease;
+}
+
+.linkedin {
+    z-index: 2;
+    position: fixed;
+    
+    width: 2.924%;
+    aspect-ratio: 1 / 1;
+
+    top: 0%;
+    right: 0%;
+
+    margin: 6.5% 2.392% 0% 0%;
+}
+
+.linkedin:hover {
+    animation: shaking 150ms ease-in-out infinite;
+}
+
+.github {
+    z-index: 2;
+    position: fixed;
+    
+    width: 2.924%;
+    aspect-ratio: 1 / 1;
+
+    top: 0%;
+    right: 0%;
+
+    margin: 6.5% 6.5% 0% 0%;
+}
+
+.github:hover {
+    animation: shaking 150ms ease-in-out infinite;
+}
+
+.header {
+    z-index: 1;
+    position: fixed;
+    display: flex;
+
+    background-color: rgb(252, 246, 243);
+
+    font-size: 2.658vw;
+    
+    width: 100%;
+    aspect-ratio: 9.405 / 1;
+
+    top: 0%;
+    left: 0%;
+
+    margin: 0%;
+    padding-left: 2.658%;
+
+    justify-content: left;
+    align-items: center;
+}
+
+/* Project Gallery */
+#project_list {
+    position: fixed;
+    display: grid;
+
+    grid-template-columns: repeat(3, 1fr);
+    gap: 0%;
+
+    top: 30%;
+}
+
+.project {
+    display: flex;
+    flex-direction: column;
+    
+    background-color: rgb(240, 220, 211);
+    box-shadow: 0.532vw 0.532vw rgb(189, 175, 168);
+
+    width: 80%;
+    aspect-ratio: 0.83 / 1;
+
+    margin: 0% 0% 15% 9%;
+    padding: 0% 3.19% 0.266% 2.658%;
+    box-sizing: border-box;
+
+    overflow-y: scroll;
+    scrollbar-width: none; 
+    -ms-overflow-style: none; 
+
+    transition: 0.5s ease;
+}
+
+.project:hover {
+    animation: hover 5s ease-in-out infinite;
+    scale: 1.05;
+    transition: 150ms ease;
 }
 
 .project::-webkit-scrollbar {
     display: none;
 }
 
-.project:hover {
-    scale:1.05;
-    transition: 150ms ease;
+.project_title {
+    background-color: black;
+    color: white;
+
+    font-size: 1.25vw;
+    
+    margin-right: auto;
+    padding: 2%;
+}
+
+.project_desc {
+    font-size: 0.7vw;
+
+    margin: 0% 2% 5% 0%;
+}
+
+.project_img {
+    width: 100%;
+    height: auto;
+
+    border: 0.3vw solid rgb(189, 175, 168);
 }
 
 .project_link {
-    margin-top: auto; 
-    margin-bottom: 15px; 
-    color: white; 
     background-color: black;
-    padding: 5px 7px;
-    margin-right: auto;
+    color: white;
+
+    font-size: 0.9vw;
+
+    margin: auto auto 4% 0%;
+    padding: 1.5%;
+}
+
+/* Experiences */
+#experiences_placeholder {
+    position: absolute;
+    background-color: black;
+    color: white;
+
+    font-size: 1.25vw;
+
+    margin: 13% auto 0% 2.658%;
+    padding: 1%;
+}
+
+/* Minigame - Title Screen */
+#minigame_background {
+    position: fixed;
+
+    background-image: url("assets/forest.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    width: 25%;
+    aspect-ratio: 1 / 1;
+    
+    top: 0%;
+    left: 0%;
+
+    margin: 19% 0% 0% 4%;
+
+    animation: fade 1.5s ease-in-out;
+}
+
+#minigame_border {
+    position: fixed;
+
+    background-color: rgb(177, 86, 94);
+    box-shadow: 0.532vw 0.532vw rgb(79, 27, 3);
+
+    width: 27%;
+    aspect-ratio: 1 / 1;
+
+    top: 0%;
+    left: 0%;
+
+    margin: 18% 0% 0% 3%;
+
+    animation: fade 1.5s ease-in-out;
+}
+
+#minigame_popup {
+    position: fixed;
+    display: flex;
+
+    background-color: rgb(177, 86, 94);
+    color: white;
+    box-shadow: 0.532vw 0.532vw rgb(79, 27, 3);
+
+    font-size: 1.063vw;
+
+    width: 27%;
+    aspect-ratio: 10 / 1;
+
+    top: 0%;
+    left: 0%;
+
+    margin: 14.5% 0% 0% 3%;
+
+    justify-content: center;
+    align-items: center;
+
+    animation: fade 1.5s ease-in-out;
+}
+
+#ball_logo {
+    position: absolute;
+
+    width: 50%;
+    height: auto;
+
+    top: 35%;
+    left: 50%;
+
+    transform: translate(-50%, -50%)
+}
+
+#minigame_title {
+    position: absolute;
+    display: flex;
+
+    background-color: black;
+    color: white;
+
+    font-size: 1vw;
+    width: 98%;
+
+    top: 35%;
+    left: 50%;
+
+    margin: 0%;
+    padding: 1% 1%;
+    transform: translate(-50%, -50%);
+    justify-content: center;
+}
+
+#minigame_button {
+    z-index: 100;
+    position: absolute;
+
+    background-color: black;
+    color: white;
+    border-radius: 0.4vw;
+
+    font-size: 1.5vw;
+
+    top: 80%;
+    left: 50%;
+
+    padding: 1% 22.83%;
+    transform: translate(-50%, -50%);
+
+    transition: 0.5s ease;
+}
+
+#minigame_button:hover {
+    transform: translate(-50%, -50%) scale(1.1);
+    transition: 150ms ease;
+
+    cursor: pointer;
+}
+
+/* Minigame - Game */
+#minigame_timer {
+    position: absolute;
+
+    background-color: black;
+    color: white;
+
+    font-size: 1.5vw;
+
+    top: 4%;
+    left: 3.5%;
+
+    margin: 0%;
+    padding: 0% 1%;
+}
+
+#counter_logo {
+    position: absolute;
+
+    width: 10%;
+    height: auto;
+
+    top: 2%;
+    right: 3.5%;
+}
+
+#minigame_score {
+    position: absolute;
+
+    background-color: black;
+    color: white;
+
+    font-size: 1.5vw;
+
+    top: 4%;
+    right: 15%;
+
+    margin: 0%;
+    padding: 0% 1%;
+}
+
+#pokemon {
+    z-index: 5;
+    position: absolute;
+    
+    width: 15%;
+    height: auto;
+
+    bottom: 0%;
+    left: 5%;
+}
+
+#pokemon:hover {
+    scale: 1.1;
+    transition: 150ms ease;
+
+    cursor: pointer;
 }
