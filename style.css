@@ -1,12 +1,16 @@
 /* Changing font for ALL my Text */
 @font-face {
     font-family: 'Horizon';
-    src: url('Horizon.woff2') format('woff2');
+    src: url('fonts/Horizon.woff2') format('woff2');
 }
 
 body {
     font-family: 'Horizon', sans-serif;
+
     background-color: rgb(252, 246, 243);
+
+    margin: 0;
+
     -webkit-user-select: none;
     user-select: none;
 }
@@ -29,6 +33,12 @@ body {
     100% {transform: translateY(1%)}
 }
 
+@keyframes fade {
+    0% {transform: translateY(3%); opacity: 0.6}
+    100% {transform: translateY(0%); opacity: 1}
+}
+
+/* Click Animation */
 .click_box {
     z-index: 100;
     position: fixed;
@@ -45,42 +55,50 @@ body {
 
 @keyframes click {
     0% {transform: translate(-50%, -50%) scale(1); opacity: 1}
-    100% {transform: translate(-50%, -50%) scale(4); opacity: 0;}
+    100% {transform: translate(-50%, -50%) scale(4); opacity: 0}
 }
 
 /* Logo */
 #logo {
-    position: relative;
+    position: fixed;
 
     background-color: rgb(26, 26, 26);
     color: rgb(252, 246, 243);
     box-shadow: 0.532vw 0.532vw black;
 
-    width: 23.734%;
+    width: 10%;
     aspect-ratio: 1 / 1;
 
-    margin: 2.658% 0% 0% 2.658%;
+    margin: 3% 0% 0% 3%;
+
+    animation: fade 1.5s ease-in-out;
 }
 
 #logo_title1 {
     position: absolute;
 
-    font-size: 1.595vw;
+    top: 22%;
+    left: 8%;
 
-    margin: 20% 0% 0% 9%;
+    font-size: 0.7vw;
+
+    margin: 0%;
 }
 
 #logo_title2 {
     position: absolute;
 
-    font-size: 14.354vw;
+    top: 20%;
+    left: -17%;
 
-    margin: 22% 0% 0% -17%;
+    font-size: 6vw;
+
+    margin: 0%;
 }
 
 /* About Me */
 #about {
-    position: relative;
+    position: fixed;
     display: flex;
     flex-direction: column;
 
@@ -88,12 +106,16 @@ body {
     color: black;
     box-shadow: 0.532vw 0.532vw rgb(217, 188, 172);
 
-    width: 37.214%;
-    aspect-ratio: 2.3 / 1; 
+    width: 64%;
+    aspect-ratio: 4 / 1; 
 
-    margin: 2.658% 0% 0% 2.658%;
+    left: 0%;
+
+    margin: 14.5% 0% 0% 33%;
     padding: 0% 0% 0% 0.797%;
     box-sizing: border-box;
+
+    animation: fade 1.5s ease-in-out;
 }
 
 #about_title {
@@ -103,13 +125,85 @@ body {
     font-size: 1.25vw;
 
     margin-right: auto;
-    padding: 1%;
+    padding: 0.5% 1%;
 }
 
 .about_desc {
-    font-size: 0.995vw;
+    font-size: 0.9vw;
 
-    margin: 0% 0% 2% 0%;
+    width: 40%;
+    margin: 0% 0% 1% 0%;
+}
+
+#about_img {
+    position: absolute;
+
+    background-image: url(assets/personalimg.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    width: 50%;
+    height: 81.5%;
+
+    top: 6.5%;
+    right: 4%;
+
+    border: 0.6vw solid rgb(217, 188, 172);
+}
+
+/* Tech Stack */
+#tech_stack {
+    position: fixed;
+    display: flex;
+    flex-direction: column;
+
+    background-color: rgb(177, 86, 94);
+    box-shadow: 0.532vw 0.532vw rgb(79, 27, 3);
+
+    width: 64%;
+    aspect-ratio: 5 / 1; 
+
+    margin: 32.2% 0% 0% 33%;
+    padding: 0% 0.797% 0% 0.797%;
+    box-sizing: border-box;
+
+    overflow-x: clip;
+    overflow-y: scroll;
+    scrollbar-width: none; 
+    -ms-overflow-style: none; 
+
+    animation: fade 1.5s ease-in-out;
+}
+
+#tech_stack::-webkit-scrollbar {
+    display: none;
+}
+
+#stack_title {
+    background-color: black;
+    color: white;
+
+    font-size: 1.25vw;
+
+    margin-right: auto;
+    padding: 0.5% 1%;
+}
+
+.resource {
+    display: inline-block;
+
+    background-color: black;
+    color: rgb(177, 86, 94);
+
+    font-size: 1vw;
+
+    margin: 0% auto 1% 0%;
+    padding: 1% 5%;
+    justify-content: center;
+}
+
+.resource:hover {
+    transform: translateY(-10%);
 }
 
 /* Navigation */
@@ -350,19 +444,60 @@ body {
 #minigame_background {
     position: fixed;
 
-    background-image: url("forest.png");
+    background-image: url("assets/forest.png");
     background-repeat: no-repeat;
     background-size: cover;
 
-    box-shadow: 0.532vw 0.532vw rgb(1, 15, 0);
-
-    width: 30%;
+    width: 25%;
     aspect-ratio: 1 / 1;
     
     top: 0%;
-    right: 0%;
+    left: 0%;
 
-    margin: 12% 15% 10% 0%;
+    margin: 19% 0% 0% 4%;
+
+    animation: fade 1.5s ease-in-out;
+}
+
+#minigame_border {
+    position: fixed;
+
+    background-color: rgb(177, 86, 94);
+    box-shadow: 0.532vw 0.532vw rgb(79, 27, 3);
+
+    width: 27%;
+    aspect-ratio: 1 / 1;
+
+    top: 0%;
+    left: 0%;
+
+    margin: 18% 0% 0% 3%;
+
+    animation: fade 1.5s ease-in-out;
+}
+
+#minigame_popup {
+    position: fixed;
+    display: flex;
+
+    background-color: rgb(177, 86, 94);
+    color: white;
+    box-shadow: 0.532vw 0.532vw rgb(79, 27, 3);
+
+    font-size: 1.063vw;
+
+    width: 27%;
+    aspect-ratio: 10 / 1;
+
+    top: 0%;
+    left: 0%;
+
+    margin: 14.5% 0% 0% 3%;
+
+    justify-content: center;
+    align-items: center;
+
+    animation: fade 1.5s ease-in-out;
 }
 
 #ball_logo {
@@ -379,18 +514,21 @@ body {
 
 #minigame_title {
     position: absolute;
+    display: flex;
 
     background-color: black;
     color: white;
 
     font-size: 1vw;
+    width: 98%;
 
     top: 35%;
     left: 50%;
 
     margin: 0%;
     padding: 1% 1%;
-    transform: translate(-50%, -50%)
+    transform: translate(-50%, -50%);
+    justify-content: center;
 }
 
 #minigame_button {
@@ -399,6 +537,7 @@ body {
 
     background-color: black;
     color: white;
+    border-radius: 0.4vw;
 
     font-size: 1.5vw;
 
@@ -457,17 +596,6 @@ body {
 
     margin: 0%;
     padding: 0% 1%;
-}
-
-#bush {
-    z-index: 10;
-    position: absolute;
-
-    width: 125%;
-    height: auto;
-    
-    bottom: 0%;
-    right: -15%;
 }
 
 #pokemon {
